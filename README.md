@@ -16,22 +16,24 @@ HTML
     FOOTER 
     
 JS 
-    Import DOM elements 
+    X Import DOM elements 
     State 
-        wins  
-        losses 
-        draws
-        total tries 
+        X wins  
+        X losses 
+        X draws
+        X total tries 
     
     eventListener 
-        plus total tries 
-        getRandomThrow - random number genertator 0, 1, 2
+        X plus total tries 
+        X getRandomThrow - random number genertator 0, 1, 2
             -this should return rock, paper or scissors not the numbers
             -this should be in a seperate js file
-        Get user choice document.QuerySelector('input:checked')
-        didUserWin - compare user nput with computer rando number 
-            -takes in user choice and comp choise and returns win, lose, or draw
+        X Get user choice document.QuerySelector('input:checked')
+        X didUserWin - compare user input with computer rando number 
+            -takes in user choice and comp choice and returns win, lose, or draw
             -this should also be in seperate js file 
+        Change info on scree to reflect win, lose, draw
+        ++ counts 
         
 
 THEN BACK TO CSS 

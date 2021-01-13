@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { compChoice } from './getCompThrow.js';
+import { didUserWin } from './didUserWin.js';
 
 const throwBtn = document.getElementById('playButton');
 const choices = document.getElementById('choices');
@@ -7,6 +8,7 @@ const winLoseOrDraw = document.getElementById('winLoseOrDraw');
 const wins = document.getElementById('wins');
 const losses = document.getElementById('losses');
 const draws = document.getElementById('draws');
+const tries = document.getElementById('tries');
 
 
 // initialize state
@@ -20,6 +22,9 @@ throwBtn.addEventListener('click', () => {
     numOfTries++;
     const userChoice = document.querySelector('input[type=radio]:checked');
     let computerThrow = compChoice();
+    let userWin = didUserWin(userChoice.value, computerThrow);
 
+    console.log(userChoice.value);
     console.log(computerThrow);
+    console.log(userWin);
 });
