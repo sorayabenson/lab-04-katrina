@@ -5,17 +5,18 @@ MAKE A PLAN!
 HTML 
     HEADER 
     BODY 
-        describe game and rules 
-        3 radio buttons in lable tags all with same name
-        play button 
-        show what they chose and what the computer chose
-        did they win? 
-        show win count
-        show loss count 
-        show draw count
+        X  describe game and rules 
+        X  3 radio buttons in lable tags all with same name
+        X  play button 
+        X show what they chose and what the computer chose
+        X did they win? 
+        X show win count
+        X show loss count 
+        X show draw count
     FOOTER 
     
 JS 
+    Import DOM elements 
     State 
         wins  
         losses 
@@ -33,4 +34,4 @@ JS
             -this should also be in seperate js file 
         
 
-THEN CSS 
+THEN BACK TO CSS 
