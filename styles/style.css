@@ -13,9 +13,9 @@ body {
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
     
-    --header-height: 80px;
+    --header-height: 120px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
+    --gutter: 20px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
@@ -47,7 +47,7 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -64,6 +64,7 @@ footer {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    padding: 10px;
 }
 
 .gutter-right {
@@ -78,7 +79,14 @@ header img {
     height: var(--header-height);
 }
 
+input {
+    display: none;
+}
 
+input[type=radio]:checked + img {
+    border: solid 5px #aac52d;
+    border-radius: 12px;
+}
 
 content {
     width: 80%;
@@ -87,7 +95,53 @@ content {
 p {
     margin: var(--gutter);
 }
-  
+
+#selectors img {
+    max-width: 275px;
+    margin: 5px;
+}
+
+#selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+button {
+    border: solid 3px black;
+    color: white;
+    background-color: #de1127;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: x-large;
+}
+#choices, #winLoseOrDraw{
+    font-size: 24px;
+}
+.wld{
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+}
+#wins {
+    margin: 10px;
+    color: #aac52d;
+}
+#losses {
+    margin: 10px;
+    color: #de1127;
+}
+
+#draws {
+    margin: 10px;
+    color: #18a196;
+}
+#tries {
+    margin: 10px;
+    color:black;
+}
+
 footer {
     position: fixed;
     width: 100%;
