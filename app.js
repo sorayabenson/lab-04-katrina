@@ -46,6 +46,9 @@ throwBtn.addEventListener('click', () => {
 
     tries.textContent = `Out of ${numOfTries} tries!`;
 
+    //show reset button
+    resetBtn.style.display = "block";
+
 });
 
 resetBtn.addEventListener('click', () => {
