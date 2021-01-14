@@ -40,7 +40,7 @@ throwBtn.addEventListener('click', () => {
     else {
         winLoseOrDraw.textContent = `Sorry, you lost. Try again!`;
         currentLosses++;
-        losses.textContent = `Wins: ${currentLosses}`;
+        losses.textContent = `Losses: ${currentLosses}`;
     }
     tries.textContent = `Out of ${numOfTries} tries!`;
 
