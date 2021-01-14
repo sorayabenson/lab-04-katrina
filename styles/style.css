@@ -60,7 +60,6 @@ footer {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -116,18 +115,22 @@ button {
     padding: 10px;
     font-size: x-large;
 }
-#choices, #winLoseOrDraw{
+
+#choices, #winLoseOrDraw {
     font-size: 24px;
 }
-.wld{
+
+.wld {
     display: flex;
     flex-direction: row;
     font-size: 24px;
 }
+
 #wins {
     margin: 10px;
     color: #aac52d;
 }
+
 #losses {
     margin: 10px;
     color: #de1127;
@@ -137,6 +140,7 @@ button {
     margin: 10px;
     color: #18a196;
 }
+
 #tries {
     margin: 10px;
     color:black;

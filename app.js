@@ -3,7 +3,7 @@ import { compChoice } from './getCompThrow.js';
 import { didUserWin } from './didUserWin.js';
 
 const throwBtn = document.getElementById('playButton');
-const choices = document.getElementById('choices');
+const compAndUserChoices = document.getElementById('comp-and-user-choices');
 const winLoseOrDraw = document.getElementById('winLoseOrDraw');
 const wins = document.getElementById('wins');
 const losses = document.getElementById('losses');
@@ -23,16 +23,16 @@ throwBtn.addEventListener('click', () => {
 
     const userChoice = document.querySelector('input[type=radio]:checked');
     let computerThrow = compChoice();
-    let userWin = didUserWin(userChoice.value, computerThrow);
+    let gameOutcome = didUserWin(userChoice.value, computerThrow);
 
-    choices.textContent = `You chose ${userChoice.value}, and the computer chose ${computerThrow}!`;
+    compAndUserChoices.textContent = `You chose ${userChoice.value}, and the computer chose ${computerThrow}!`;
 
-    if (userWin === 'draw') {
+    if (gameOutcome === 'draw') {
         winLoseOrDraw.textContent = `That's a draw!`;
         currentDraws++;
         draws.textContent = `Draws: ${currentDraws}`;
     }
-    else if (userWin === 'userWin') {
+    else if (gameOutcome === 'userWin') {
         winLoseOrDraw.textContent = `NICE!! You won!`;
         currentWins++;
         wins.textContent = `Wins: ${currentWins}`;
