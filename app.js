@@ -20,11 +20,28 @@ let currentDraws = 0;
 // set event listeners to update state and DOM
 throwBtn.addEventListener('click', () => {
     numOfTries++;
+
     const userChoice = document.querySelector('input[type=radio]:checked');
     let computerThrow = compChoice();
     let userWin = didUserWin(userChoice.value, computerThrow);
 
-    console.log(userChoice.value);
-    console.log(computerThrow);
-    console.log(userWin);
-});
+    choices.textContent = `You chose ${userChoice.value}, and the computer chose ${computerThrow}!`;
+
+    if (userWin === 'draw') {
+        winLoseOrDraw.textContent = `That's a draw!`;
+        currentDraws++;
+        draws.textContent = `Draws: ${currentDraws}`;
+    }
+    else if (userWin === 'userWin') {
+        winLoseOrDraw.textContent = `NICE!! You won!`;
+        currentWins++;
+        wins.textContent = `Wins: ${currentWins}`;
+    }
+    else {
+        winLoseOrDraw.textContent = `Sorry, you lost. Try again!`;
+        currentLosses++;
+        losses.textContent = `Wins: ${currentLosses}`;
+    }
+    tries.textContent = `Out of ${numOfTries} tries!`;
+
+}); 
