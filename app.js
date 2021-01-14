@@ -9,6 +9,7 @@ const wins = document.getElementById('wins');
 const losses = document.getElementById('losses');
 const draws = document.getElementById('draws');
 const tries = document.getElementById('tries');
+const resetBtn = document.getElementById('resetButton');
 
 
 // initialize state
@@ -42,6 +43,27 @@ throwBtn.addEventListener('click', () => {
         currentLosses++;
         losses.textContent = `Losses: ${currentLosses}`;
     }
+
     tries.textContent = `Out of ${numOfTries} tries!`;
 
-}); 
+});
+
+resetBtn.addEventListener('click', () => {
+
+    //reset all of the state elements
+    numOfTries = 0;
+    currentWins = 0;
+    currentLosses = 0;
+    currentDraws = 0;
+
+    tries.textContent = `Out of ${numOfTries} tries!`;
+    draws.textContent = `Draws: ${currentDraws}`;
+    wins.textContent = `Wins: ${currentWins}`;
+    losses.textContent = `Losses: ${currentLosses}`;
+
+    //rehide compAndUserChoices and winLoseOrDraw
+    compAndUserChoices.style.display = 'none';
+
+    winLoseOrDraw.style.display = 'none';
+
+})
