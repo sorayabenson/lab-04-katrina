@@ -21,7 +21,7 @@ let currentDraws = 0;
 // set event listeners to update state and DOM
 throwBtn.addEventListener('click', () => {
 
-    if (document.querySelector('input[type=radio]:checked') == null) {
+    if (document.querySelector('input[type=radio]:checked') === null) {
         winLoseOrDraw.textContent = `You need to make a choice`;
         return;
     }
